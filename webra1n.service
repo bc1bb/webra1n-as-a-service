@@ -1,0 +1,17 @@
+[Service]
+Description=Webra1n
+After=network.target
+StartLimitIntervalSec=0
+Type=simple
+Restart=always
+RestartSec=1
+StandardInput=tty
+TTYPath=/dev/tty2
+TTYReset=yes
+TTYVHangup=yes
+User=root
+ExecStart=/usr/bin/webra1n
+ExecStop=/bin/kill $(/bin/pidof webra1n)
+
+[Install]
+WantedBy=multi-user.target
