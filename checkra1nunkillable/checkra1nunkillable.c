@@ -18,7 +18,7 @@ int main(void) {
     ioctl(STDOUT_FILENO, TIOCGWINSZ, &w);
 
     while (1) {
-        if (( w.ws_col <= 80 || w.ws_row < 24)) {
+        if (( w.ws_col <= 80 || w.ws_row <= 24)) {
             // if terminal size is less than 80x24 (minimum required by checkra1n), use it in CLI mode instead of TUI
             fprintf(stderr, "\033[0;31mYour terminal is too small to start checkra1n in TUI mode, using CLI mode instead.\033[0m\nYou can resize and use CTRL+C to use TUI mode\n");
             system("/usr/bin/checkra1n --cli");
