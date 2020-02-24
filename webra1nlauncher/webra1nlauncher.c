@@ -20,8 +20,6 @@ int main(int argc, char *argv[]) {
 
         if ((strcmp(arg1, PORT) == 0 || strcmp(arg1, P) == 0)) {
             // if argument is "--port" or "-p" (strange way to do but fml took me a whole day to figure out.)
-            printf("%s\n", arg1);
-            printf("%d\n", arg2);
 
             if (argc >= 3) {
                 arg2 = atoi(argv[2]);
