@@ -13,14 +13,17 @@ bash MAIN.sh
 - You can access Checkra1n on SSH (port `22` by default, default user/password is `checkra1n`/`checkra1n` and is sudoer for all checkra1n-related executables)
 
 ### How to uninstall
-`bash MAIN.sh uninstall`
+`bash uninstall.sh`
+
+### How to update
+'bash update.sh'
 
 ## To be done
 - [~~Checkra1n Downloader~~ ✅](/checkra1n-downloader/checkra1n-downloader.sh)
 - [~~Webra1n Service file~~ ✅](/webra1n.service)
 - Access point creator
 - [~~user creator for using `checkra1n` over SSH instead of HTTP~~ ✅](/MAIN.sh)
-- Raspberry Pi image
+- ~~Raspberry Pi image~~ ✅ 
 
 ## Warning
 - **There is only support for Systemd**
