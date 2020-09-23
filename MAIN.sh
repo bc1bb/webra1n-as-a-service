@@ -47,31 +47,10 @@ if [[ -z "$1" ]] || [[ "$1" = "install" ]]; then
   systemctl start webra1n
   # add webra1n.service to systemd services and enable it (=start it at reboots)
 
-elif [[ "$1" = "uninstall" ]] || [[ "$1" = "remove" ]]; then
-  systemctl stop webra1n
-  systemctl disable webra1n
-  rm /etc/systemd/system/webra1n.service
-  systemctl daemon-reload
-  # remove systemd service
-
-  cp /etc/sudoers.beforewebra1n /etc/sudoers  || fatal "Couldn't use /etc/sudoers backup"
-  deluser checkra1n
-  # remove checkra1n user
-
-  rm /usr/bin/checkra1n
-  rm /usr/bin/webra1n
-  rm /usr/bin/checkra1nunkillable
-  # remove compilated executable from PATH
-
-  rm checkra1n
-  rm checkra1nunkillable/checkra1nunkillable
-  rm webra1nlauncher/webra1n
-  # remove compilated executable from here
 else
   echo "Webra1n-As-a-Service"
   echo "Jus de Patate - 2020 - jusdepatate@protonmail.com"
   echo ""
   echo "The only accepted arguments are:"
   echo "install - To install webra1n"
-  echo "unistall - To remove webra1n"
 fi
