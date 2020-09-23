@@ -17,9 +17,12 @@ arch=$(uname -m)
 if [ "$(echo "$links" | grep "$arch")" ]; then
   link=$(echo "$links" | grep "$arch")
 else
+if arch=aarch64 ; then
+arch=arm64
+else
   fatal "Looks like we can't download checkra1n for you architecture ($arch)"
 fi
-
+fi
 link=$(echo "$links" | grep "$arch")
 # here we have the link corresponding to machine's arch
 
