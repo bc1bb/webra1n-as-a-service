@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Jus de Patate - 2020 - jusdepatate@protonmail.com (github:jusdepatate)
+# Lloir - 2020 - (github:Lloir)
 # This script is part of Webra1n As a Service (github:jusdepatate/webra1n-as-a-service)
 
 systemctl stop webra1n
